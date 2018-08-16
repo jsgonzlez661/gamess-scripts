@@ -7,3 +7,8 @@
 
 4.- Ingresar el nombre del archivo de salida .log del compuesto a obtener los espectros
 
+Nota 
+
+# Es necesario tener instalado python en su version  >=3.6
+ 
+
