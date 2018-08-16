@@ -1,0 +1,9 @@
+
+1.- Copiar el archivo RMN_dibujar.py en la carpeta que contiene los archivos .log resultado de un analisis de Resonancia magnetica nuclear, realizado con GAMESS
+
+2.- Ejecutar el archivo RMN_dibujar.py 
+
+3.- Ingresar el nombre del archivo de salida .log del tetrametilsilano (TMS)
+
+4.- Ingresar el nombre del archivo de salida .log del compuesto a obtener los espectros
+
