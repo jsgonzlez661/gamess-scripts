@@ -1,11 +1,51 @@
 Script GAMESS 32 bit 2010 R3
 ejecutar muchas entradas .inp
 
-1.- Crear un archivo job.txt en la carpeta de gamess.32
+Instrucciones para run_GAMESS.bat
+
+1.- Crear un archivo job.txt en la carpeta de gamess.32, en dicho archivo escribir los nombres de las entradas sin la extesión '.inp' y separados por una espaciado.
+
+---------- job.txt ----------
+
+exam1
+exam2
+
+---------- job.txt ----------
+
+ 
 2.- Copiar y pegar el archivo run_GAMESS.bat a la carpeta gamess.32 
-3.- Abrir el archivo job.txt y copiar los nombres de las entradas a ejecutar sin la extension '.inp'
-4.- Ejecutar el script run_GAMESS.bat 
+
+3.- Ejecutar el script run_GAMESS.bat 
 
 Nota:
 
 Probado en GAMESS 2010 R3 Windows 32 bits 
+
+Instrucciones para run_GAMESS.py
+
+1.- Copiar y pegar el archivo run_GAMESS.bat a la carpeta gamess.32 
+2.- Crear un archivo job.txt en la carpeta de gamess.32 ( el script run_GAMESS.py puede crearlo)
+
+Si crea el archivo job.txt con run_GAMESS.py seguir los pasos 3 y 4: 
+	3.- En run_GAMESS.py solicitara la cantidad de archivos de entrada, insertar solamente un numero
+	4.- En run_GAMESS.py solicitara los nombre de los archivos de entradas sin la extensión '.inp'
+	El archivo job.txt tiene que tener las siguientes caracteristicas:
+
+	---------- job.txt ----------
+
+	2
+	exam1
+	exam2
+
+	---------- job.txt ----------
+
+primero la cantidad de archivos y luego los nombres de los archivos
+
+5.- Ejecutar el script run_GAMESS.py
+
+Nota: 
+
+Probado en GAMESS 2010 R3 Windows 32 bits 
+
+# Necesario tener instalado python en su version >= 3.6
+ 
