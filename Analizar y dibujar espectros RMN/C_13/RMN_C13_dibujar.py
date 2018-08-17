@@ -1,9 +1,9 @@
 # Script python para lectura y analisis de valores de para RMN de 13 C apartir de archivos 
 # .log generado por GAMESS
 
-#Version 1.10
+#Version 1.20
 
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 print()
 log = input("Ingrese el archivo del TMS ") + '.log'
@@ -90,24 +90,52 @@ if(question== 'y'):
 	for i in range(0, len(RMN_13C)):
 		doc.write(str(round(RMN_13C[i],3)))
 		doc.write('\n')
-	print(" \nLISTO ")
+	print(" \nLISTO\n ")
 	doc.close()
 
 
-#RMN_13C.sort()
+RMN_13C.sort(reverse=True)
 
-#x =[RMN_13C[0],RMN_13C[0]]
-#y = [0, 1000]
+#or
+for i in range(0, len(RMN_13C)):
+	RMN_13C[i] = round(RMN_13C[i], 3) 
 
-#z =[RMN_13C[1],RMN_13C[1]]
-#w = [0, 212]
+data_ppm = RMN_13C
+data_intensidad = []
 
-#l = [-5,200]
-#top = [0,0]
-#plt.figure()
-#plt.plot(x, y)
-#plt.plot(z, w)
-#plt.plot(l, top)
-#plt.xlabel('ppm')
-#plt.yticks([])
-#plt.show()
+#print(data_ppm)
+
+for i in range(0, len(data_ppm)):
+	data_intensidad.append(float(input("Ingrese el valor de la intensidad para " + str(data_ppm[i]) + " ppm : ")))
+
+#print(data_ppm)
+#print(data_intensidad)
+
+posicion = 950
+
+for i in range(0 , len(data_ppm)):	
+	x = [data_ppm[i], data_ppm[i]]
+	y = [0 , data_intensidad[i]]
+	lines_setp = plt.plot(x, y)
+	plt.setp(lines_setp , color = 'k')
+	plt.text(-40, 1000, "   ppm  ")
+	plt.text(-40, posicion, str(data_ppm[i]))
+#	plt.text(-40, 1000, " " , bbox = dict(fc = "none"))
+	posicion= posicion-50
+
+
+# dibujar linea base
+line_x = [0,200]
+line_y = [0,0]
+lines = plt.plot(line_x, line_y)
+plt.setp(lines , color = 'k')
+
+
+
+
+
+Titulo = "Espectro de Resonancia Magnetica Nuclear de C 13"
+plt.title(Titulo, fontsize = 14)
+plt.yticks([])
+plt.xlabel('ppm', fontsize = 12)
+plt.show()
