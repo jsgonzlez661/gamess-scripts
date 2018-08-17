@@ -13,8 +13,7 @@ exam2
 ---------- job.txt ----------
 
  
-2.- Copiar y pegar el archivo run_GAMESS.bat a la carpeta gamess.32 
-
+2.- Copiar y pegar el archivo run_GAMESS.bat a la carpeta gamess.32
 3.- Ejecutar el script run_GAMESS.bat 
 
 Nota:
