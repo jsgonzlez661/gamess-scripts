@@ -9,6 +9,7 @@
 
 Nota 
 
-# Es necesario tener instalado python en su version  >=3.6
+# Es necesario tener instalado python en su version  >= 3.6  (https://www.python.org)
+# instalar la libreria matplotlib.pyplot para poder grafica con python (https://matplotlib.org)
  
 
